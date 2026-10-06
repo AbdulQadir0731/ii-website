@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,nofollow">
+<title>ii — a rules-based token planned for Credail members</title>
+<meta name="description" content="ii (say “use”) is a rules-based token in development for members of Credail. Mint within your allowance; returns are voluntary; every record is public. Not available yet.">
+<link rel="canonical" href="https://ii.money/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abdulqadir0731.github.io/ii-website/"><!-- GO-LIVE: https://ii.money/ -->
+<meta property="og:title" content="ii · In development">
+<meta property="og:description" content="A rules-based token planned for members of Credail. Not available yet.">
+<meta property="og:image" content="https://abdulqadir0731.github.io/ii-website/assets/img/og.png"><!-- GO-LIVE: https://ii.money/assets/img/og.png -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1116" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="ii home">
+      <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true"><rect x="26" y="50" width="22" height="58" rx="11" class="ink"/><rect x="72" y="50" width="22" height="58" rx="11" class="ink"/><circle cx="37" cy="24" r="14" class="coin"/><circle cx="83" cy="24" r="11" class="ring"/></svg>
+      <span class="brand-say">say “use”</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#score">ii Score</a>
+      <a href="#faq">Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>In development · Not yet available</p>
+      <h1 class="hero-title"><span class="sr">ii</span>
+        <svg class="hero-mark" viewBox="0 0 120 120" aria-hidden="true"><rect x="26" y="50" width="22" height="58" rx="11" class="ink"/><rect x="72" y="50" width="22" height="58" rx="11" class="ink"/><circle cx="37" cy="24" r="14" class="coin"/><circle cx="83" cy="24" r="11" class="ring"/></svg>
+      </h1>
+      <p class="say">say “use”</p>
+      <p class="lead">Mint ii within your allowance. Returns are voluntary, and your public record shows every one.</p>
+      <p class="sublead">A rules-based token planned for members of Credail. The rules are fixed and every record is public.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#how">How it works</a>
+        <a class="btn" href="#faq">Read the rules</a>
+      </div>
+      <p class="fine">In development, not available. ii has no guaranteed dollar value, no redemption promise and no guaranteed buyer. Minting creates no debt; returns are voluntary.</p>
+    </div>
+
+    <figure class="hero-art">
+      <svg id="cycle" class="cycle" viewBox="0 0 360 360" role="img" aria-labelledby="cycle-t">
+        <title id="cycle-t">A minted coin, then four voluntary returns recorded one by one, filling the public record.</title>
+        <circle cx="180" cy="180" r="150" class="track"/>
+        <circle cx="180" cy="180" r="150" class="progress" pathLength="100"/>
+        <g class="ticks">
+          <g class="tick t1"><circle cx="180" cy="30" r="17"/><path d="M172 30l6 6 11-12"/></g>
+          <g class="tick t2"><circle cx="330" cy="180" r="17"/><path d="M322 180l6 6 11-12"/></g>
+          <g class="tick t3"><circle cx="180" cy="330" r="17"/><path d="M172 330l6 6 11-12"/></g>
+          <g class="tick t4"><circle cx="30" cy="180" r="17"/><path d="M22 180l6 6 11-12"/></g>
+        </g>
+        <g class="core">
+          <circle cx="180" cy="180" r="74" class="coin-big"/>
+          <rect x="157" y="168" width="14" height="44" rx="7" class="core-ink"/>
+          <rect x="189" y="168" width="14" height="44" rx="7" class="core-ink"/>
+          <circle cx="164" cy="150" r="9" class="core-ink"/>
+          <circle cx="196" cy="150" r="9" class="core-ink"/>
+        </g>
+      </svg>
+      <figcaption>
+        <span>Mint → four voluntary returns → public record</span>
+        <button type="button" class="pause" id="pause" aria-pressed="false">Pause animation</button>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2 id="how-h">Four steps, one public record</h2>
+    <ol class="steps">
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="21" width="30" height="21" rx="5" class="i-line"/><path d="M16 21v-6a8 8 0 0 1 16 0" class="i-line"/><circle cx="24" cy="31" r="3" class="i-fill"/></svg>
+        <h3>Unlock</h3>
+        <p>Eligible Credail members unlock a first allowance of 25,000 ii, set by a starting ii Score of 25.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" class="i-fill"/><path d="M24 17v14M17 24h14" class="i-paper"/></svg>
+        <h3>Mint</h3>
+        <p>Mint any amount within your allowance, whenever you choose. Nothing is minted automatically.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 34h32" class="i-line"/><circle cx="12" cy="24" r="4" class="i-fill"/><circle cx="20" cy="24" r="4" class="i-fill"/><circle cx="28" cy="24" r="4" class="i-fill"/><circle cx="36" cy="24" r="4" class="i-ring"/></svg>
+        <h3>Return</h3>
+        <p>Each mint comes with a short series of voluntary returns. The exact schedule will be published before launch.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="7" width="26" height="34" rx="4" class="i-line"/><path d="M17 17h14M17 24h14M17 31h8" class="i-line"/></svg>
+        <h3>Record</h3>
+        <p>Every return made — and every return not made — stays on your public record and sets your ii Score.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band alt" id="score" aria-labelledby="score-h">
+  <div class="wrap two">
+    <div>
+      <p class="kicker">The ii Score</p>
+      <h2 id="score-h">Your allowance is set by your ii Score</h2>
+      <ul class="facts">
+        <li><span class="mono">0–100</span> The ii Score starts at 25 and is separate from your Credail score.</li>
+        <li><span class="mono">× 1,000</span> Your allowance is your ii Score × 1,000 ii, up to 100,000 ii.</li>
+        <li><span class="mono">public</span> Returns made on schedule build the score over time; returns not made lower it.</li>
+      </ul>
+      <h3 class="h3s">How the score rule works</h3>
+      <p class="muted">With every return made on schedule, a member's score is designed to reach 50 after the first year and 100 after ten years.</p>
+    </div>
+    <figure class="chart">
+      <svg viewBox="0 0 420 260" role="img" aria-labelledby="chart-t">
+        <title id="chart-t">ii Score over ten years with every return made on schedule: 25 at the start, 50 after year one, then rising evenly to 100 after year ten.</title>
+        <g class="grid"><path d="M50 30H400M50 130H400M50 180H400M50 230H400"/></g>
+        <g class="axis-l"><text x="40" y="34">100</text><text x="40" y="134">50</text><text x="40" y="184">25</text><text x="40" y="234">0</text></g>
+        <g class="axis-b"><text x="50" y="252">0</text><text x="85" y="252">1</text><text x="225" y="252">5</text><text x="400" y="252">10 yrs</text></g>
+        <path class="line" d="M50 180L85 130L120 118.89L155 107.78L190 96.67L225 85.56L260 74.44L295 63.33L330 52.22L365 41.11L400 30.0"/>
+        <g class="pts"><circle cx="50" cy="180" r="4"/><circle cx="85" cy="130" r="4"/><circle cx="400" cy="30" r="5"/></g>
+      </svg>
+      <figcaption>Score only — not a price, not a value.</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="calc" id="calc">
+      <h3>Allowance illustration</h3>
+      <div class="calc-grid">
+        <label for="s-score">ii Score <output id="o-score" class="mono">25.00</output></label>
+        <input id="s-score" type="range" min="0" max="100" step="0.01" value="25">
+        <label for="s-out">ii minted and not yet returned <output id="o-out" class="mono">0 ii</output></label>
+        <input id="s-out" type="range" min="0" max="100000" step="500" value="0">
+      </div>
+      <div class="calc-res">
+        <div><span class="lbl">Allowance</span><span id="r-allow" class="big mono">25,000 ii</span></div>
+        <div><span class="lbl">Available to mint</span><span id="r-avail" class="big mono">25,000 ii</span></div>
+      </div>
+      <p class="fine">Illustration of the planned allowance rule. ii amounts only. ii has no guaranteed dollar value.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="principles" aria-labelledby="pr-h">
+  <div class="wrap">
+    <p class="kicker">Planned principles</p>
+    <h2 id="pr-h">Designed to be fair, open and fixed</h2>
+    <div class="cards">
+      <article><h3>No network fees</h3><p>No network fees are planned for minting, returning or transfers. Payment providers may charge their own fees on marketplace sales.</p></article>
+      <article><h3>Independent operators</h3><p>The ii network is planned to be run by independent operators, not by Credail alone.</p></article>
+      <article><h3>Rules in public code</h3><p>The rules will be published as public code before launch and are designed to be fixed once live.</p></article>
+      <article><h3>Public, private where it matters</h3><p>Mints, returns and transfers are planned to be recorded publicly. Identity documents never go on the network.</p></article>
+      <article><h3>Your keys</h3><p>The plan is for you to hold your own keys, with an encrypted backup in your own Google Drive or iCloud.</p></article>
+      <article><h3>Marketplace</h3><p>A marketplace where members set their own prices is planned. It is subject to legal and regulatory review and is not available.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="records" aria-labelledby="rec-h">
+  <div class="wrap">
+    <div class="records">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="5" class="i-line"/><path d="M14 19h20M14 26h20M14 33h12" class="i-line"/></svg>
+      <div>
+        <h2 id="rec-h">Public records</h2>
+        <p>Exchange, mint and return records and a link to the public explorer will appear here when the network is live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <p class="kicker">Questions</p>
+    <h2 id="faq-h">The rules, plainly</h2>
+    <p class="muted">These describe the planned rules, which may change before launch.</p>
+    <details><summary>What is ii?</summary><p>ii (say “use”) is a rules-based token in development for members of Credail. Members will be able to mint ii within an allowance set by their ii Score, make voluntary returns, and build a public record.</p></details>
+    <details><summary>Is ii a loan?</summary><p>No. Minting ii creates no debt and no obligation to repay, and there is no interest. Returns are voluntary; they affect your ii Score and your future allowance.</p></details>
+    <details><summary>Does ii have a dollar value?</summary><p>ii has no guaranteed dollar value. No one promises to redeem ii, buy it, or exchange it for money, and there may be no buyer at any price.</p></details>
+    <details><summary>Who will be able to mint?</summary><p>Eligible Credail members who pass the planned checks, including a verified phone number and device checks.</p></details>
+    <details><summary>What happens if a return is not made?</summary><p>It stays on your public record and lowers your ii Score, which lowers your future allowance. Under the planned rules, nothing you already hold is taken away.</p></details>
+    <details><summary>Why is the score so precise?</summary><p>Scores are designed to be calculated exactly and kept to eight decimal places, so anyone can check every result once the rules are public. They are shown rounded.</p></details>
+    <details><summary>Is there a sale, presale or airdrop?</summary><p>No. There is no ii sale, presale or airdrop, and we will never ask for your keys or recovery phrase.</p></details>
+    <details><summary>When will ii launch?</summary><p>There is no launch date yet. This page will be updated.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="disclaimer">ii is in development and is not available. Nothing on this site is an offer to sell, or a solicitation of an offer to buy, ii or any other asset. ii is not a loan, credit, deposit or investment product, and it is not backed by Credail or anyone else. ii has no guaranteed dollar value. No one promises to redeem ii, buy it, or exchange it for money, and there may be no buyer at any price. Minting ii creates no debt and no interest, and returns are voluntary. Features, figures and schedules described here are planned, may change, and may not launch in every country or at all. There is no ii sale, presale or airdrop, and we will never ask for your keys or recovery phrase.</p>
+    <div class="foot-grid">
+      <p>ii is planned to work inside Credail. ii features are not in the Credail app today. Credail is available on the <a href="https://apps.apple.com/us/app/credail/id6777994889" rel="noopener noreferrer">App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.credail.app" rel="noopener noreferrer">Google Play</a>.</p>
+      <p>Operator details will be published before launch.<br>No cookies, no analytics. Our host (GitHub) logs IP addresses; see <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub's privacy statement</a>.</p>
+    </div>
+    <p class="meta">Last updated: October 2026 · Fonts: IBM Plex (SIL Open Font License)</p>
+  </div>
+</footer>
+</body>
+</html>
