@@ -22,6 +22,8 @@
       rAvail.textContent = fmt.format(avail) + " ii";
       out.setAttribute("aria-valuetext", fmt.format(u) + " ii");
       score.setAttribute("aria-valuetext", s.toFixed(2));
+      score.style.setProperty("--p", s + "%");
+      out.style.setProperty("--p", (u / 1000) + "%");
     };
     score.addEventListener("input", update);
     out.addEventListener("input", update);

@@ -171,3 +171,118 @@ details p { color: var(--muted); padding-bottom: 12px; }
 .foot-grid { display: grid; gap: 16px; }
 @media (min-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
 .meta { margin-top: 20px; font-size: 13px; }
+
+/* ── UI review (Oct 6, 2026) ─────────────────────────────────────────────── */
+/* 1 rhythm + alternating bands */
+.hero { padding: 48px 0 64px; }
+@media (min-width: 900px) { .hero { padding: 72px 0 80px; } }
+.band { padding: 80px 0; }
+@media (max-width: 719px) { .band { padding: 56px 0; } }
+.band + .band:not(.alt), .hero + .band:not(.alt) { border-top: 1px solid var(--line); }
+/* 2 focus keeps pill shape; calmer hovers */
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { border-radius: 0; }
+a:not(.btn):focus-visible, summary:focus-visible { border-radius: 6px; }
+.btn, .pause { transition: background-color .15s, color .15s, border-color .15s; }
+.btn:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); transform: none; }
+.btn.primary:hover { background: color-mix(in srgb, var(--ink) 86%, var(--green)); }
+@media (prefers-reduced-motion: reduce) { .btn, .pause { transition: none; } }
+/* 3 wordmark flush left */
+.hero-mark { width: clamp(76px, 10vw, 104px); margin-left: 0; }
+.say { margin: 14px 0 28px; }
+.brand-mark { width: 26px; height: 34px; }
+/* 4 logo ring inside the big coin */
+.core-ring { fill: none; stroke: var(--bg); stroke-width: 4; }
+/* 5 lighter ring, smaller on mobile, centred caption */
+.track, .progress { stroke-width: 7; }
+.hero-art { width: min(100%, 300px); }
+@media (min-width: 900px) { .hero-art { width: min(100%, 420px); } }
+.hero-art figcaption { justify-content: center; text-align: center; }
+.pause { min-height: 44px; }
+/* 6 chart */
+.chart .end { text-anchor: end; }
+.chart .ytitle { text-anchor: start; font-weight: 500; fill: var(--text); }
+.chart .grid path { stroke-dasharray: 2 4; }
+.chart { padding: 20px 20px 16px; }
+/* 7 sliders: styled track with fill (--p set by site.js) */
+input[type=range] { -webkit-appearance: none; appearance: none; background: transparent; height: 44px; cursor: pointer; --p: 25%; }
+input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(to right, var(--green) var(--p), var(--line) var(--p)); }
+input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: var(--line); }
+input[type=range]::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--green); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: 50%; background: var(--surface); border: 3px solid var(--green); box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--green); }
+input[type=range]:focus-visible { outline-offset: 0; }
+/* 8 result tiles: "Available to mint" is the answer */
+.calc { padding: 28px; }
+.calc-grid { gap: 4px 40px; }
+.calc label { align-items: baseline; }
+.calc-res > div { padding: 16px 18px; border-radius: 12px; }
+.calc-res > div:last-child { background: color-mix(in srgb, var(--green) 10%, var(--surface)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--green) 30%, transparent); }
+.calc-res > div:last-child .big { color: var(--green-text); }
+.big { display: block; margin-top: 4px; font-size: clamp(24px, 3vw, 30px); letter-spacing: -0.01em; }
+/* 9 public records as a quiet empty state */
+.records { margin-top: 16px; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 36px 24px; background: transparent; border: 1.5px dashed var(--line); }
+.records svg { width: 36px; height: 36px; opacity: .7; }
+.records h3 { font-size: 19px; }
+.records p { max-width: 52ch; }
+.pill { font: 500 12px/1 "Plex Mono", monospace; color: var(--amber-text); background: color-mix(in srgb, var(--amber) 16%, transparent); padding: 6px 10px; border-radius: 999px; }
+/* 10 FAQ on the page's left edge */
+.faq { display: grid; gap: 8px 64px; }
+@media (min-width: 900px) { .faq { grid-template-columns: 4fr 7fr; } .faq-head { position: sticky; top: 88px; align-self: start; } }
+summary { padding: 18px 40px 18px 0; transition: color .15s; }
+summary:hover { color: var(--green-text); }
+summary::after { top: 50%; transform: translateY(-50%); right: 4px; font-size: 22px; }
+.faq-list details:first-child { border-top: 1px solid var(--line); }
+details p { max-width: 62ch; padding-bottom: 8px; }
+/* 11 one icon language: ink outline + one green accent */
+.i-acc { fill: none; stroke: var(--green); stroke-width: 2.5; stroke-linecap: round; }
+.steps svg { width: 40px; height: 40px; margin-bottom: 18px; }
+.steps li { padding: 24px; }
+.steps li::before { top: 24px; right: 24px; }
+/* 12 dark mode: visible bands, lifted cards, green primary */
+@media (prefers-color-scheme: dark) {
+  :root { --band: #141920; --surface: #1A1F27; --line: #2C333D; }
+  .eyebrow, .pill { background: color-mix(in srgb, var(--amber) 14%, transparent); }
+  .btn.primary { background: var(--green); color: #0E1116; border-color: var(--green); }
+  .btn.primary:hover { background: color-mix(in srgb, var(--green) 88%, #ffffff); }
+}
+/* 13 footer: brand row, readable disclaimer, clean accent */
+.foot-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; color: var(--text); font-weight: 500; }
+.foot-brand .brand-mark { width: 19px; height: 24px; }
+.disclaimer { max-width: 78ch; border-left-width: 1px; box-shadow: inset 4px 0 0 var(--amber); padding: 20px 22px 20px 26px; font-size: 14px; line-height: 1.6; }
+.foot-grid p { max-width: 60ch; }
+.meta { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 28px; }
+/* 15 header + rhythm (kickers stay sentence case so "ii" never becomes "II") */
+.top-in { height: 64px; }
+nav { gap: 4px; }
+nav a { padding: 12px; border-radius: 8px; min-height: 44px; display: inline-flex; align-items: center; }
+nav a:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); color: var(--ink); }
+.brand-say { font: 400 13px/1 "Plex Mono", monospace; }
+h2 { letter-spacing: -0.02em; margin-bottom: 32px; }
+.lead { max-width: 26ch; letter-spacing: -0.01em; }
+.cards article, .steps li { transition: border-color .15s; }
+.cards article:hover, .steps li:hover { border-color: color-mix(in srgb, var(--green) 40%, var(--line)); }
+#how, #score, #principles, #faq { scroll-margin-top: 72px; }
+.facts li { align-items: start; }
+
+/* Return points (Oct 6, 2026) */
+#points { scroll-margin-top: 72px; }
+.intro { max-width: 68ch; margin: -12px 0 32px; }
+.stages { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .stages { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .stages { grid-template-columns: repeat(4, 1fr); } }
+.stages li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.stage-n { font-size: 12px; color: var(--muted); }
+.stages h3 { margin: 8px 0 12px; }
+.pts { margin: 0 0 12px; font-weight: 500; color: var(--text); }
+.pts span { display: inline-block; font-size: 20px; margin-right: 6px; }
+.up { color: var(--green-text); }
+.down { color: var(--red-text); }
+.stages p:last-child { margin: 0; color: var(--muted); }
+.ex { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.ex table { width: 100%; max-width: 560px; border-collapse: collapse; }
+.ex caption { text-align: left; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.ex th, .ex td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+.ex th { font-weight: 500; color: var(--muted); font-size: 14px; }
+.ex .n { text-align: right; }
+.ex .fine { margin-top: 16px; max-width: 72ch; }
+@media (max-width: 560px) { nav a[href="#points"] { display: none; } }

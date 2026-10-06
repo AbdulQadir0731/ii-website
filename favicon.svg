@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 2 48 60">
   <style>.s{fill:#0E1116}@media (prefers-color-scheme:dark){.s{fill:#ECEAE4}}</style>
-  <rect class="s" x="12" y="26" width="14" height="32" rx="7"/>
-  <rect class="s" x="38" y="26" width="14" height="32" rx="7"/>
-  <circle cx="19" cy="12" r="8" fill="#16A36B"/>
-  <circle cx="45" cy="12" r="6" fill="none" stroke="#16A36B" stroke-width="4"/>
+  <rect class="s" x="12" y="26" width="14" height="34" rx="7"/>
+  <rect class="s" x="38" y="26" width="14" height="34" rx="7"/>
+  <circle cx="19" cy="12" r="8.5" fill="#16A36B"/>
+  <circle cx="45" cy="12" r="6" fill="none" stroke="#16A36B" stroke-width="5"/>
 </svg>
